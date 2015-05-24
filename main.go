@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"time"
 )
@@ -11,6 +12,13 @@ func main() {
 }
 
 func handleRoot(rw http.ResponseWriter, req *http.Request) {
+	t := time.Now()
 	time.Sleep(5 * time.Second)
-	rw.Write([]byte(`<div style="font-size:442px; text-align:center;">42</div>`))
+
+	template := `<div style="font-size:442px; text-align:center;">42</div>
+	<em>Calculated at %v</em>`
+
+	content := []byte(fmt.Sprintf(template, t.String()))
+
+	rw.Write(content)
 }
