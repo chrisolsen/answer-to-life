@@ -15,7 +15,7 @@ docker build -t answer_to_life .
 
 ## Create redis container
 ```
-docker run -d -it --name atol-redis -p 6380:6379 redis:latest
+docker run -d -it --name atol-redis -p 6379:6379 redis:latest
 ```
 
 ## Create container from our custom docker image and link it to redis
