@@ -12,7 +12,7 @@ docker build -t answer_to_life .
 
 ## Create container from our custom docker image
 ```
-docker run -d -it --name answer-to-life	e -p 3000:3000 -v $(pwd):/var/www answer_to_life
+docker run -d -it --name answer-to-life -p 3000:3000 -v $(pwd):/var/www answer_to_life
 ```
 
 ## Start app
