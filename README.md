@@ -17,5 +17,5 @@ docker run -d -it --name answer-to-life -p 3000:3000 -v $(pwd):/var/www answer_t
 
 ## Start app
 ```
-docker exec -it answer-to-life bash (cd /var/www/ && gin -a 4200)
+docker exec -it answer-to-life bash -c "(cd /var/www/ && gin -a 4200)"
 ```
